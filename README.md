@@ -4,7 +4,7 @@
 
 ---
 
-**name (required) [string]**
+#### name (required) [string]
 
 The name of the package as stored in the registry.
 
@@ -17,7 +17,7 @@ The name of the package as stored in the registry.
 
 ---
 
-**version [string]**
+#### version [string]
 
 The current version of the package.
 
@@ -27,13 +27,13 @@ The current version of the package.
 
 ---
 
-**location [string]**
+#### location [string]
 
 The endpoint where Bower can find your package. This is used during registration.
 
 ---
 
-**description [string]**
+#### description [string]
 
 Help users identify and search for your package with a brief description. Describe what your package does, rather than what it's made of. Will be displayed in search/lookup results on the CLI and the website that can be used to search for packages. Recommended.
 
@@ -41,7 +41,7 @@ Help users identify and search for your package with a brief description. Descri
 
 ---
 
-**keywords [array of strings]**
+#### keywords [array of strings]
 
 Used for search by keyword. Helps make your package easier to discover without people needing to know its name. Recommended.
 
@@ -49,7 +49,7 @@ Used for search by keyword. Helps make your package easier to discover without p
 
 ---
 
-**main [string|array of strings]**
+#### main [string|array of strings]
 
 The primary acting files necessary to use your package. While Bower does not directly use these files, they are listed with the commands `bower list --json` and `bower list --paths`, so they can be used by build tools.
 
@@ -60,7 +60,7 @@ The primary acting files necessary to use your package. While Bower does not dir
 
 ---
 
-**dependencies [hash]**
+#### dependencies [hash]
 
 Dependencies are specified with a simple hash of package name to a semver compatible identifier or URL.
 
@@ -71,13 +71,13 @@ Dependencies are specified with a simple hash of package name to a semver compat
 
 ---
 
-**devDependencies [hash]**
+#### devDependencies [hash]
 
 Dependencies that are only needed for development of the package, e.g., test framework or building documentation.
 
 ---
 
-**ignore [array of strings]**
+#### ignore [array of strings]
 
 A list of files for Bower to ignore when installing your package. Note: README (all variants of case, .md, .text) will never be ignored.
 
@@ -85,26 +85,26 @@ A list of files for Bower to ignore when installing your package. Note: README (
 
 ---
 
-**license [string | array of strings]**
+#### license [string | array of strings]
 
 [SPDX license identifier](https://spdx.org/licenses/) or path/url to license.
 
 ---
 
-**authors [array of strings|array of hashes]**
+#### authors [array of strings|array of hashes]
 
 Either `”authors”: [“John Doe”, “John Doe <john@doe.com>”, “John Doe <john@doe.com> (http://johndoe.com)”]`
 or: `”authors”: [{ “name”: “John Doe” }, { “name”: “John Doe”, “email”: “john@doe.com” },  { “name”: “John Doe”, “email”: “john@doe.com”,” homepage”: “http://johndoe.com” }]`
 
 ---
 
-**homepage [string]**
+#### homepage [string]
 
 URL to learn more about the package. Falls back to GitHub project if not specified and it’s a GitHub endpoint.
 
 ---
 
-**repository [object]**
+#### repository [object]
 
 The repository in which the source code can be found.
 
@@ -112,6 +112,6 @@ The repository in which the source code can be found.
 
 ---
 
-**private [string boolean]**
+#### private [string boolean]
 
 If you set `"private": true` in your bower.json, it will refuse to publish it. This is a way to prevent accidental publication of private repositories.
