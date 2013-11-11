@@ -19,7 +19,7 @@ The name of the package as stored in the registry.
 
 The current version of the package.
 
-* Must be a semantic version - http://semver.org/ - i.e, parseable by node-semver.
+* Must be a semantic version - http://semver.org/ - i.e, parseable by [node-semver.](https://github.com/isaacs/node-semver)
 * If publishing a folder, the version must be higher than the version stored in the registry, when republishing.
 * Version should only be required if you are not using Git tags.
 
