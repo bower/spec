@@ -1,4 +1,4 @@
-# Bower spec
+# bower.json specification
 
 `bower.json` - The package manifest
 
@@ -9,16 +9,16 @@
 The name of the package as stored in the registry.
 
 * Should be slug style for simplicity, consistency and compatibility.
-* Must be unique
+* Must be unique.
 * Lowercase, a-z, can contain dash or dot but not start/end with them.
-* Consecutive dashes or dots not allowed
-* 50 characters or less
+* Consecutive dashes or dots not allowed.
+* 50 characters or fewer.
 
 ---
 
 #### version [string]
 
-The current version of the package.
+The package's semantic version number.
 
 * Must be a semantic version - http://semver.org/ - i.e, parseable by [node-semver.](https://github.com/isaacs/node-semver)
 * If publishing a folder, the version must be higher than the version stored in the registry, when republishing.
@@ -54,7 +54,7 @@ The primary acting files necessary to use your package. While Bower does not dir
 
 * Coffeescript should be compiled.
 * Do not include minified files.
-* Files should not be versioned (Bad: package.1.1.0.js; Good: package.js).
+* Files names should not be versioned (Bad: package.1.1.0.js; Good: package.js).
 
 
 ---
@@ -63,9 +63,9 @@ The primary acting files necessary to use your package. While Bower does not dir
 
 Dependencies are specified with a simple hash of package name to a semver compatible identifier or URL.
 
-* Key must be a <name> that matches the validation pattern for the `name` property.
+* Key must be a `name` that matches the validation pattern for the `name` property.
 * Value must be a semver compatible identifier, a Git URL, or a URL (inc. tarball and zipball).
-* Value can be an owner/package shorthand, i.e. owner/package. By default, the shorthand resolves to GitHub -> https://github.com/owner/package. This may be changed in .bowerrc shorthand_resolver.
+* Value can be an owner/package shorthand, i.e. owner/package. By default, the shorthand resolves to GitHub -> https://github.com/owner/package. This may be changed in `.bowerrc` shorthand_resolver.
 * Local paths may be used as values for local development. But they will be disallowed when registering.
 
 ---
@@ -92,8 +92,23 @@ A list of files for Bower to ignore when installing your package. Note: README (
 
 #### authors [array of strings|array of hashes]
 
-Either `”authors”: [“John Doe”, “John Doe <john@doe.com>”, “John Doe <john@doe.com> (http://johndoe.com)”]`
-or: `”authors”: [{ “name”: “John Doe” }, { “name”: “John Doe”, “email”: “john@doe.com” },  { “name”: “John Doe”, “email”: “john@doe.com”,” homepage”: “http://johndoe.com” }]`
+Either
+
+```json
+"authors": [
+  "John Doe", "John Doe <john@doe.com>",
+  "John Doe <john@doe.com> (http://johndoe.com)"
+]
+```
+
+or:
+```json
+"authors": [
+  { "name": "John Doe" },
+  { "name": "John Doe", “email": “john@doe.com" },
+  { "name": "John Doe", "email": "john@doe.com"," homepage": "http://johndoe.com" }
+]
+```
 
 ---
 
@@ -107,10 +122,14 @@ URL to learn more about the package. Falls back to GitHub project if not specifi
 
 The repository in which the source code can be found.
 
-`”repository: { “type”: “git”, “url”: “git://github.com/foo/bar.git” }”`
+```json
+"repository: {
+  "type": "git", "url": "git://github.com/foo/bar.git"
+}"
+```
 
 ---
 
 #### private [string boolean]
 
-If you set `"private": true` in your bower.json, it will refuse to publish it. This is a way to prevent accidental publication of private repositories.
+If you set `"private": true` in your `bower.json`, it will refuse to publish it. This is a way to prevent accidental publication of private repositories.
