@@ -85,8 +85,9 @@ A list of files for Bower to ignore when installing your package. Note: README (
 
 **license [string | array of strings]**
 
-Name of license or path/url to license.
+[SPDX license identifier](https://spdx.org/licenses/) or path/url to license.
 
+---
 
 **authors [array of strings|array of hashes]**
 
