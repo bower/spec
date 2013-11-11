@@ -49,7 +49,12 @@ Used for search by keyword. Helps make your package easier to discover without p
 
 **main [string|array of strings]**
 
-The primary acting files necessary to use your package. While Bower does not directly use these files, they are listed with the commands `bower list --json` and `bower list --paths`, so they can be used by build tools. Do not include minified files. Files should not be versioned (Bad: package.1.1.0.js; Good: package.js).
+The primary acting files necessary to use your package. While Bower does not directly use these files, they are listed with the commands `bower list --json` and `bower list --paths`, so they can be used by build tools.
+
+* Coffeescript should be compiled.
+* Do not include minified files.
+* Files should not be versioned (Bad: package.1.1.0.js; Good: package.js).
+
 
 ---
 
