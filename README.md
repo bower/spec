@@ -13,7 +13,6 @@ The name of the package as stored in the registry.
 * Lowercase, a-z, can contain dash or dot but not start/end with them.
 * Consecutive dashes or dots not allowed
 * 50 characters or less
-* Must match `/^([a-z]([a-z]|(-(?!-)))+[a-z]){50}$/`
 
 ---
 
