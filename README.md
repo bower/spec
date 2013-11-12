@@ -50,7 +50,7 @@ Used for search by keyword. Helps make your package easier to discover without p
 
 #### main [string|array of strings]
 
-The primary filename to use as an alias for the package name. Any "requires" or "imports" of the package name symbol should reference this file instead. If `main` is omitted, its default value is `index`. While Bower does not directly use these files, they are listed with the commands `bower list --json` and `bower list --paths`, so they can be used by build tools.
+The primary filename to use as an alias for the package name. Any "requires" or "imports" of the package name symbol should reference this file instead. While Bower does not directly use these files, they are listed with the commands `bower list --json` and `bower list --paths`, so they can be used by build tools.
 
 * Coffeescript should be compiled.
 * Do not include minified files.
