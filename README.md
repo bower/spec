@@ -56,9 +56,9 @@ The primary acting files necessary to use your package. While Bower does not dir
 * Do not include minified files.
 * Files names should not be versioned (Bad: package.1.1.0.js; Good: package.js).
 
-When main is a hash
+When main is a hash, the `{packageName}.{mainKey}` maps to `{packageName}/{mainValue}`.
 
-* Key must be a file extension without a leading `.`.
+* Key must be a file extension(s) without a leading `.`.
 * Value must be a string filename relative to the root of the package.
 * Value filename should have a file extension.
 
