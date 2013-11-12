@@ -56,6 +56,23 @@ The primary acting files necessary to use your package. While Bower does not dir
 * Do not include minified files.
 * Files names should not be versioned (Bad: package.1.1.0.js; Good: package.js).
 
+### paths [hash]
+
+A set of path aliases for nested files in the package other than main.
+
+* Key should include a file extension
+* Key should not include the package name as a prefix (Bad: package/bar.js, Good: barjs)
+* Key maybe the name of an existing filename (thus shaddowing it)
+* Value should include a file extension
+* Value should be relative to the package root
+
+```
+"paths": {
+  "modal.css": "css/modal.css",
+  "modal.js": "js/modal.js",
+  "button.js": "js/scrollspy.js"
+}
+```
 
 ---
 
