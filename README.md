@@ -55,7 +55,7 @@ The primary acting files necessary to use your package. While Bower does not dir
 * Coffeescript should be compiled.
 * Do not include minified files.
 * Files names should not be versioned (Bad: package.1.1.0.js; Good: package.js).
-
+* When an array is given, there must only be one path per file extension.
 
 ---
 
