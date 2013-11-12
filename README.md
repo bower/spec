@@ -48,14 +48,14 @@ Used for search by keyword. Helps make your package easier to discover without p
 
 ---
 
-#### main [string|array of strings]
+#### main [string]
 
 The primary acting files necessary to use your package. While Bower does not directly use these files, they are listed with the commands `bower list --json` and `bower list --paths`, so they can be used by build tools.
 
 * Coffeescript should be compiled.
 * Do not include minified files.
 * Files names should not be versioned (Bad: package.1.1.0.js; Good: package.js).
-* When an array is given, there must only be one path per file extension.
+* An array is also supported but is considered deprecated. Packages should not use the array format, however build tools should still support it. There must only be one path per file extension in the array.
 
 ---
 
