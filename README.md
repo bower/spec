@@ -56,6 +56,13 @@ The primary acting files necessary to use your package. While Bower does not dir
 * Do not include minified files.
 * Files names should not be versioned (Bad: package.1.1.0.js; Good: package.js).
 
+---
+
+#### moduleType [string|array of strings]
+
+The type of module defined in the `main` JavaScript file. Can be `amd`, `es6`, `globals`, `node` or an array containing any combination of these. Not case-sensitive.
+
+Required if `main` is present.
 
 ---
 
