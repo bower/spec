@@ -123,9 +123,9 @@ URL to learn more about the package. Falls back to GitHub project if not specifi
 The repository in which the source code can be found.
 
 ```json
-"repository: {
+"repository": {
   "type": "git", "url": "git://github.com/foo/bar.git"
-}"
+}
 ```
 
 ---
