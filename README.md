@@ -60,7 +60,7 @@ The primary acting files necessary to use your package. While Bower does not dir
 
 #### moduleType [string|array of strings]
 
-The type of module defined in the `main` JavaScript file. Can be `amd`, `es6`, `globals`, `node` or an array containing any combination of these. Not case-sensitive.
+The type of module defined in the `main` JavaScript file. Can be `amd`, `es6`, `globals`, `node` or an array containing any combination of these.
 
 Required if `main` is present.
 
