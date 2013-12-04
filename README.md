@@ -20,7 +20,7 @@ The name of the package as stored in the registry.
 
 The package's semantic version number.
 
-* Must be a semantic version - http://semver.org/ - i.e, parseable by [node-semver.](https://github.com/isaacs/node-semver)
+* Must be a semantic version - http://semver.org/ - i.e, parseable by [node-semver](https://github.com/isaacs/node-semver).
 * If publishing a folder, the version must be higher than the version stored in the registry, when republishing.
 * Version should only be required if you are not using Git tags.
 
@@ -48,11 +48,11 @@ Used for search by keyword. Helps make your package easier to discover without p
 
 ---
 
-#### main [string|array of strings]
+#### main [string | array of strings]
 
 The primary acting files necessary to use your package. While Bower does not directly use these files, they are listed with the commands `bower list --json` and `bower list --paths`, so they can be used by build tools.
 
-* Coffeescript should be compiled.
+* CoffeeScript should be compiled.
 * Do not include minified files.
 * Files names should not be versioned (Bad: package.1.1.0.js; Good: package.js).
 
