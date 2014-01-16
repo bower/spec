@@ -1,8 +1,7 @@
 # bower.json specification
 
-`bower.json` - The package manifest
+> `bower.json` - the package manifest
 
----
 
 #### name (required) [string]
 
@@ -14,7 +13,6 @@ The name of the package as stored in the registry.
 * Consecutive dashes or dots not allowed.
 * 50 characters or fewer.
 
----
 
 #### version [string]
 
@@ -24,13 +22,11 @@ The package's semantic version number.
 * If publishing a folder, the version must be higher than the version stored in the registry, when republishing.
 * Version should only be required if you are not using Git tags.
 
----
 
 #### location [string]
 
 The endpoint where Bower can find your package. This is used during registration.
 
----
 
 #### description [string]
 
@@ -38,7 +34,6 @@ Help users identify and search for your package with a brief description. Descri
 
 * Any character. Max 140.
 
----
 
 #### keywords [array of strings]
 
@@ -46,7 +41,6 @@ Used for search by keyword. Helps make your package easier to discover without p
 
 * Same format requirements as `name`.
 
----
 
 #### main [string | array of strings]
 
@@ -57,8 +51,6 @@ The primary acting files necessary to use your package. While Bower does not dir
 * Files names should not be versioned (Bad: package.1.1.0.js; Good: package.js).
 
 
----
-
 #### dependencies [hash]
 
 Dependencies are specified with a simple hash of package name to a semver compatible identifier or URL.
@@ -68,19 +60,16 @@ Dependencies are specified with a simple hash of package name to a semver compat
 * Value can be an owner/package shorthand, i.e. owner/package. By default, the shorthand resolves to GitHub -> https://github.com/owner/package. This may be changed in `.bowerrc` shorthand_resolver.
 * Local paths may be used as values for local development. But they will be disallowed when registering.
 
----
 
 #### devDependencies [hash]
 
 Dependencies that are only needed for development of the package, e.g., test framework or building documentation.
 
----
 
 #### resolutions [hash]
 
 Dependency versions to automatically resolve with if conflicts occur between packages.
 
----
 
 #### ignore [array of strings]
 
@@ -88,13 +77,11 @@ A list of files for Bower to ignore when installing your package. Note: README (
 
 * The ignore rules follow the same rules specified in the gitignore pattern spec.
 
----
 
 #### license [string | array of strings]
 
 [SPDX license identifier](https://spdx.org/licenses/) or path/url to license.
 
----
 
 #### authors [array of strings|array of hashes]
 
@@ -108,21 +95,20 @@ Either
 ```
 
 or:
+
 ```json
 "authors": [
   { "name": "John Doe" },
-  { "name": "John Doe", “email": “john@doe.com" },
+  { "name": "John Doe", "email": "john@doe.com" },
   { "name": "John Doe", "email": "john@doe.com"," homepage": "http://johndoe.com" }
 ]
 ```
 
----
 
 #### homepage [string]
 
 URL to learn more about the package. Falls back to GitHub project if not specified and it’s a GitHub endpoint.
 
----
 
 #### repository [object]
 
@@ -134,7 +120,6 @@ The repository in which the source code can be found.
 }
 ```
 
----
 
 #### private [string boolean]
 
