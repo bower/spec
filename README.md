@@ -76,6 +76,12 @@ Dependencies that are only needed for development of the package, e.g., test fra
 
 ---
 
+#### resolutions [hash]
+
+Dependency versions to automatically resolve with if conflicts occur between packages.
+
+---
+
 #### ignore [array of strings]
 
 A list of files for Bower to ignore when installing your package. Note: README (all variants of case, .md, .text) will never be ignored.
