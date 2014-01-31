@@ -85,7 +85,9 @@ A list of files for Bower to ignore when installing your package. Note: README (
 
 #### authors [array of strings|array of hashes]
 
-Either
+A list of people that authored the contents of the package.
+
+Either:
 
 ```json
 "authors": [
