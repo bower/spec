@@ -1,9 +1,10 @@
 # bower.json specification
 
-> `bower.json` - the package manifest
 
+### name
 
-#### name (required) [string]
+*Required*  
+Type: `String`
 
 The name of the package as stored in the registry.
 
@@ -14,7 +15,9 @@ The name of the package as stored in the registry.
 * 50 characters or less.
 
 
-#### version [string]
+### version
+
+Type: `String`
 
 The package's semantic version number.
 
@@ -23,26 +26,34 @@ The package's semantic version number.
 * Version should only be required if you are not using git tags.
 
 
-#### location [string]
+### location
+
+Type: `String`
 
 The endpoint where Bower can find your package. This is used during registration.
 
 
-#### description [string]
+### description
+
+Type: `String`
+
+Any character. Max 140.
 
 Help users identify and search for your package with a brief description. Describe what your package does, rather than what it's made of. Will be displayed in search/lookup results on the CLI and the website that can be used to search for packages. Recommended.
 
-* Any character. Max 140.
 
+### keywords
 
-#### keywords [array of strings]
+Type: `Array` with `String`
+
+Same format requirements as [name](#name).
 
 Used for search by keyword. Helps make your package easier to discover without people needing to know its name. Recommended.
 
-* Same format requirements as `name`.
 
+### main
 
-#### main [string | array of strings]
+Type: `String` | `Array` with `String`
 
 The primary acting files necessary to use your package. While Bower does not directly use these files, they are listed with the commands `bower list --json` and `bower list --paths`, so they can be used by build tools.
 
@@ -51,39 +62,57 @@ The primary acting files necessary to use your package. While Bower does not dir
 * Files names should not be versioned (Bad: package.1.1.0.js; Good: package.js).
 
 
-#### dependencies [hash]
+### dependencies [hash]
+
+Type: `Object`
 
 Dependencies are specified with a simple hash of package name to a semver compatible identifier or URL.
 
-* Key must be a `name` that matches the validation pattern for the `name` property.
-* Value must be a semver compatible identifier, a Git URL, or a URL (inc. tarball and zipball).
+* Key must be a valid [name](#name).
+* Value must be a valid [version](#version), a Git URL, or a URL (inc. tarball and zipball).
 * Value can be an owner/package shorthand, i.e. owner/package. By default, the shorthand resolves to GitHub -> https://github.com/owner/package. This may be changed in `.bowerrc` shorthand_resolver.
 * Local paths may be used as values for local development, but they will be disallowed when registering.
 
 
-#### devDependencies [hash]
+### devDependencies
+
+Type: `Object`
+
+Same rules as `dependencies`.
 
 Dependencies that are only needed for development of the package, e.g., test framework or building documentation.
 
 
-#### resolutions [hash]
+### resolutions
+
+Type: `Object`
 
 Dependency versions to automatically resolve with if conflicts occur between packages.
 
 
-#### ignore [array of strings]
+### ignore
 
-A list of files for Bower to ignore when installing your package. Note: README (all variants of case, .md, .text) and bower.json will never be ignored.
+Type: `Array` with `String`
+
+A list of files for Bower to ignore when installing your package.
+
+Note: README (all variants of case, .md, .text) and bower.json will never be ignored.
 
 The ignore rules follow the same rules specified in the [gitignore pattern spec](http://git-scm.com/docs/gitignore).
 
 
-#### license [string | array of strings]
+### license
 
-[SPDX license identifier](https://spdx.org/licenses/) or path/url to license.
+Type: `String`  
+Type: `Array` with `String`
+
+[SPDX license identifier](https://spdx.org/licenses/) or path/url to a license.
 
 
-#### authors [array of strings|array of hashes]
+### authors
+
+Type: `Array` with `String`  
+Type: `Array` with `Object`
 
 A list of people that authored the contents of the package.
 
@@ -107,22 +136,29 @@ or:
 ```
 
 
-#### homepage [string]
+### homepage
+
+Type: `String`
 
 URL to learn more about the package. Falls back to GitHub project if not specified and it’s a GitHub endpoint.
 
 
-#### repository [object]
+### repository
+
+Type: `Object`
 
 The repository in which the source code can be found.
 
 ```json
 "repository": {
-  "type": "git", "url": "git://github.com/foo/bar.git"
+  "type": "git",
+  "url": "git://github.com/foo/bar.git"
 }
 ```
 
 
-#### private [string boolean]
+### private
 
-If you set `"private": true` in your `bower.json`, it will refuse to publish it. This is a way to prevent accidental publication of private repositories.
+Type: `Boolean`
+
+If you set it to `true` it will refuse to publish it. This is a way to prevent accidental publication of private repositories.
