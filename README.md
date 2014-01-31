@@ -7,20 +7,20 @@
 
 The name of the package as stored in the registry.
 
-* Should be slug style for simplicity, consistency and compatibility.
 * Must be unique.
+* Should be slug style for simplicity, consistency and compatibility. Example: `unicorn-cake`
 * Lowercase, a-z, can contain dash or dot but not start/end with them.
 * Consecutive dashes or dots not allowed.
-* 50 characters or fewer.
+* 50 characters or less.
 
 
 #### version [string]
 
 The package's semantic version number.
 
-* Must be a semantic version - http://semver.org/ - i.e, parseable by [node-semver](https://github.com/isaacs/node-semver).
+* Must be a [semantic version](http://semver.org) parseable by [node-semver](https://github.com/isaacs/node-semver).
 * If publishing a folder, the version must be higher than the version stored in the registry, when republishing.
-* Version should only be required if you are not using Git tags.
+* Version should only be required if you are not using git tags.
 
 
 #### location [string]
@@ -46,7 +46,7 @@ Used for search by keyword. Helps make your package easier to discover without p
 
 The primary acting files necessary to use your package. While Bower does not directly use these files, they are listed with the commands `bower list --json` and `bower list --paths`, so they can be used by build tools.
 
-* CoffeeScript should be compiled.
+* Preprocessor files like CoffeeScript should be compiled.
 * Do not include minified files.
 * Files names should not be versioned (Bad: package.1.1.0.js; Good: package.js).
 
@@ -58,7 +58,7 @@ Dependencies are specified with a simple hash of package name to a semver compat
 * Key must be a `name` that matches the validation pattern for the `name` property.
 * Value must be a semver compatible identifier, a Git URL, or a URL (inc. tarball and zipball).
 * Value can be an owner/package shorthand, i.e. owner/package. By default, the shorthand resolves to GitHub -> https://github.com/owner/package. This may be changed in `.bowerrc` shorthand_resolver.
-* Local paths may be used as values for local development. But they will be disallowed when registering.
+* Local paths may be used as values for local development, but they will be disallowed when registering.
 
 
 #### devDependencies [hash]
@@ -73,9 +73,9 @@ Dependency versions to automatically resolve with if conflicts occur between pac
 
 #### ignore [array of strings]
 
-A list of files for Bower to ignore when installing your package. Note: README (all variants of case, .md, .text) will never be ignored.
+A list of files for Bower to ignore when installing your package. Note: README (all variants of case, .md, .text) and bower.json will never be ignored.
 
-* The ignore rules follow the same rules specified in the gitignore pattern spec.
+The ignore rules follow the same rules specified in the [gitignore pattern spec](http://git-scm.com/docs/gitignore).
 
 
 #### license [string | array of strings]
