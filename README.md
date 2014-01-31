@@ -15,24 +15,6 @@ The name of the package as stored in the registry.
 * 50 characters or less.
 
 
-### version
-
-Type: `String`
-
-The package's semantic version number.
-
-* Must be a [semantic version](http://semver.org) parseable by [node-semver](https://github.com/isaacs/node-semver).
-* If publishing a folder, the version must be higher than the version stored in the registry, when republishing.
-* Version should only be required if you are not using git tags.
-
-
-### location
-
-Type: `String`
-
-The endpoint where Bower can find your package. This is used during registration.
-
-
 ### description
 
 *Recommended*  
@@ -43,14 +25,15 @@ Any character. Max 140.
 Help users identify and search for your package with a brief description. Describe what your package does, rather than what it's made of. Will be displayed in search/lookup results on the CLI and the website that can be used to search for packages.
 
 
-### keywords
+### version
 
-*Recommended*  
-Type: `Array` of `String`
+Type: `String`
 
-Same format requirements as [name](#name).
+The package's semantic version number.
 
-Used for search by keyword. Helps make your package easier to discover without people needing to know its name. Recommended.
+* Must be a [semantic version](http://semver.org) parseable by [node-semver](https://github.com/isaacs/node-semver).
+* If publishing a folder, the version must be higher than the version stored in the registry, when republishing.
+* Version should only be required if you are not using git tags.
 
 
 ### main
@@ -65,32 +48,12 @@ The primary acting files necessary to use your package. While Bower does not dir
 * Files names should not be versioned (Bad: package.1.1.0.js; Good: package.js).
 
 
-### dependencies [hash]
+### license
 
-Type: `Object`
+*Recommended*  
+Type: `String` or `Array` of `String`
 
-Dependencies are specified with a simple hash of package name to a semver compatible identifier or URL.
-
-* Key must be a valid [name](#name).
-* Value must be a valid [version](#version), a Git URL, or a URL (inc. tarball and zipball).
-* Value can be an owner/package shorthand, i.e. owner/package. By default, the shorthand resolves to GitHub -> https://github.com/owner/package. This may be changed in `.bowerrc` shorthand_resolver.
-* Local paths may be used as values for local development, but they will be disallowed when registering.
-
-
-### devDependencies
-
-Type: `Object`
-
-Same rules as `dependencies`.
-
-Dependencies that are only needed for development of the package, e.g., test framework or building documentation.
-
-
-### resolutions
-
-Type: `Object`
-
-Dependency versions to automatically resolve with if conflicts occur between packages.
+[SPDX license identifier](https://spdx.org/licenses/) or path/url to a license.
 
 
 ### ignore
@@ -105,12 +68,14 @@ Note: README (all variants of case, .md, .text) and bower.json will never be ign
 The ignore rules follow the same rules specified in the [gitignore pattern spec](http://git-scm.com/docs/gitignore).
 
 
-### license
+### keywords
 
 *Recommended*  
-Type: `String` or `Array` of `String`
+Type: `Array` of `String`
 
-[SPDX license identifier](https://spdx.org/licenses/) or path/url to a license.
+Same format requirements as [name](#name).
+
+Used for search by keyword. Helps make your package easier to discover without people needing to know its name. Recommended.
 
 
 ### authors
@@ -160,8 +125,43 @@ The repository in which the source code can be found.
 ```
 
 
+### dependencies
+
+Type: `Object`
+
+Dependencies are specified with a simple hash of package name to a semver compatible identifier or URL.
+
+* Key must be a valid [name](#name).
+* Value must be a valid [version](#version), a Git URL, or a URL (inc. tarball and zipball).
+* Value can be an owner/package shorthand, i.e. owner/package. By default, the shorthand resolves to GitHub -> https://github.com/owner/package. This may be changed in `.bowerrc` shorthand_resolver.
+* Local paths may be used as values for local development, but they will be disallowed when registering.
+
+
+### devDependencies
+
+Type: `Object`
+
+Same rules as `dependencies`.
+
+Dependencies that are only needed for development of the package, e.g., test framework or building documentation.
+
+
+### resolutions
+
+Type: `Object`
+
+Dependency versions to automatically resolve with if conflicts occur between packages.
+
+
 ### private
 
 Type: `Boolean`
 
 If you set it to `true` it will refuse to publish it. This is a way to prevent accidental publication of private repositories.
+
+
+### location
+
+Type: `String`
+
+The endpoint where Bower can find your package. This is used during registration.
