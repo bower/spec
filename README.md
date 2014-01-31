@@ -158,10 +158,3 @@ Dependency versions to automatically resolve with if conflicts occur between pac
 Type: `Boolean`
 
 If you set it to `true` it will refuse to publish it. This is a way to prevent accidental publication of private repositories.
-
-
-### location
-
-Type: `String`
-
-The endpoint where Bower can find your package. This is used during registration.
