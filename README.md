@@ -80,7 +80,7 @@ Used for search by keyword. Helps make your package easier to discover without p
 
 ### authors
 
-Type: `Array` of `String` or `Object`
+Type: `Array` of (`String` or `Object`)
 
 A list of people that authored the contents of the package.
 
