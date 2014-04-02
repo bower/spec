@@ -10,7 +10,7 @@ The name of the package as stored in the registry.
 
 * Must be unique.
 * Should be slug style for simplicity, consistency and compatibility. Example: `unicorn-cake`
-* Lowercase, a-z, can contain dash or dot but not start/end with them.
+* Lowercase, a-z, can contain digits, 0-9, can contain dash or dot but not start/end with them.
 * Consecutive dashes or dots not allowed.
 * 50 characters or less.
 
