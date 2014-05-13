@@ -158,3 +158,14 @@ Dependency versions to automatically resolve with if conflicts occur between pac
 Type: `Boolean`
 
 If you set it to `true` it will refuse to publish it. This is a way to prevent accidental publication of private repositories.
+
+### override
+
+Type: `Object` or `String`
+
+This option allows you to override particular fields from the bower.json value of a named dependency with either an inline object representing the override or a string containing a path to a json file containing the bower.json override to use. By default, the override value is merged with the original bower.json value of the dependency (or the generated one, if none is defined), but you can also configure the override to replace the original.
+
+* Key must be a valid [name](#name) and corresponds to the named dependency you wish to override.
+* Value can be a string containing a path to a json file which follows the bower.json spec. 
+* Value can be an object with the bower.json object specified inline.
+* Value (either the literal or the json file) can contain one additional field, 'replace', a `Boolean` which, if set to true, causes the override to replace the original completely, rather than merge with it. It is false by default.
