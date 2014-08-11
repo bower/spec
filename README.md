@@ -158,6 +158,14 @@ Type: `Object`
 
 Dependency versions to automatically resolve with if conflicts occur between packages.
 
+Example:
+
+```json
+"resolutions": {
+  "angular": "1.3.0-beta.16"
+}
+```
+
 
 ### private
 
