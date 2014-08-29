@@ -3,7 +3,7 @@
 
 ### name
 
-**Required**  
+**Required**
 Type: `String`
 
 The name of the package as stored in the registry.
@@ -17,7 +17,7 @@ The name of the package as stored in the registry.
 
 ### description
 
-*Recommended*  
+*Recommended*
 Type: `String`
 
 Any character. Max 140.
@@ -44,7 +44,7 @@ The package's semantic version number.
 
 ### main
 
-*Recommended*  
+*Recommended*
 Type: `String` or `Array` of `String`
 
 The primary acting files necessary to use your package. While Bower does not directly use these files, they are listed with the commands `bower list --json` and `bower list --paths`, so they can be used by build tools.
@@ -56,7 +56,7 @@ The primary acting files necessary to use your package. While Bower does not dir
 
 ### license
 
-*Recommended*  
+*Recommended*
 Type: `String` or `Array` of `String`
 
 [SPDX license identifier](https://spdx.org/licenses/) or path/url to a license.
@@ -64,7 +64,7 @@ Type: `String` or `Array` of `String`
 
 ### ignore
 
-*Recommended*  
+*Recommended*
 Type: `Array` of `String`
 
 A list of files for Bower to ignore when installing your package.
@@ -76,7 +76,7 @@ The ignore rules follow the same rules specified in the [gitignore pattern spec]
 
 ### keywords
 
-*Recommended*  
+*Recommended*
 Type: `Array` of `String`
 
 Same format requirements as [name](#name).
