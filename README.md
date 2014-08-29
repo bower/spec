@@ -105,7 +105,7 @@ or:
 "authors": [
   { "name": "John Doe" },
   { "name": "John Doe", "email": "john@doe.com" },
-  { "name": "John Doe", "email": "john@doe.com"," homepage": "http://johndoe.com" }
+  { "name": "John Doe", "email": "john@doe.com", "homepage": "http://johndoe.com" }
 ]
 ```
 
