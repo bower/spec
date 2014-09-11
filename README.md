@@ -47,7 +47,7 @@ The package's semantic version number.
 *Recommended*  
 Type: `String` or `Array` of `String`
 
-The primary acting files necessary to use your package. While Bower does not directly use these files, they are listed with the commands `bower list --json` and `bower list --paths`, so they can be used by build tools.
+The primary filename to use as an alias for the package name. Any "requires" or "imports" of the package name symbol should reference this file instead. While Bower does not directly use these files, they are listed with the commands `bower list --json` and `bower list --paths`, so they can be used by build tools.
 
 * Preprocessor files like CoffeeScript should be compiled.
 * Do not include minified files.
