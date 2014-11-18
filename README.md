@@ -69,7 +69,7 @@ Type: `Array` of `String`
 
 A list of files for Bower to ignore when installing your package.
 
-Note: README (all variants of case, .md, .text) and bower.json will never be ignored.
+Note: symbolic links will always be ignored. However `bower.json` will never be ignored.
 
 The ignore rules follow the same rules specified in the [gitignore pattern spec](http://git-scm.com/docs/gitignore).
 
