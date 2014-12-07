@@ -81,7 +81,7 @@ Type: `Array` of `String`
 
 Same format requirements as [name](#name).
 
-Used for search by keyword. Helps make your package easier to discover without people needing to know its name. Recommended.
+Used for search by keyword. Helps make your package easier to discover without people needing to know its name.
 
 
 ### authors
