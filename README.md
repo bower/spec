@@ -139,7 +139,7 @@ Dependencies are specified with a simple hash of package name to a semver compat
 
 * Key must be a valid [name](#name).
 * Value must be a valid [version](#version), a Git URL, or a URL (inc. tarball and zipball).
-* Value can be an owner/package shorthand, i.e. owner/package. By default, the shorthand resolves to GitHub -> https://github.com/owner/package. This may be changed in `.bowerrc` shorthand_resolver.
+* Value can be an owner/package shorthand, i.e. owner/package. By default, the shorthand resolves to GitHub -> git://github.com/{{owner}}/{{package}}.git. This may be changed in `.bowerrc` [shorthand_resolver](http://bower.io/docs/config/#shorthand-resolver).
 * Local paths may be used as values for local development, but they will be disallowed when registering.
 
 
