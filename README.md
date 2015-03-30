@@ -55,11 +55,17 @@ The primary acting files necessary to use your package. While Bower does not dir
 
 ---
 
-#### moduleType [string|array of strings]
+### moduleType
 
-The type of module defined in the `main` JavaScript file. Can be `amd`, `es6`, `globals`, `node` or an array containing any combination of these.
+Type: `String` or `Array` of `String`s
 
-Required if `main` is present.
+The type of module defined in the `main` JavaScript file. Can be one or an array of the following strings:
+
++ `globals`: JavaScript module that adds to global namespace, using `window.namespace` or `this.namespace` syntax
++ `amd`: JavaScript module compatible with AMD, like [RequireJS](http://requirejs.org/), using `define()` syntax
++ `node`: JavaScript module compatible with [node](https://nodejs.org/) and [CommonJS](https://nodejs.org/docs/latest/api/modules.html) using `module.exports` syntax
++ `es6`: JavaScript module compatible with [ECMAScript 6 modules](http://www.2ality.com/2014/09/es6-modules-final.html), using `export` and `import` syntax
++ `yui`: JavaScript module compatible with [YUI Modules](http://yuilibrary.com/yui/docs/yui/create.html), using `YUI.add()` syntax
 
 ### license
 
