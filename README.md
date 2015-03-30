@@ -53,8 +53,6 @@ The primary acting files necessary to use your package. While Bower does not dir
 * Do not include minified files.
 * Filenames should not be versioned (Bad: package.1.1.0.js; Good: package.js).
 
----
-
 ### moduleType
 
 Type: `String` or `Array` of `String`s
