@@ -66,6 +66,14 @@ Let's say your package looks like this:
         motion.png
         walk.png
         run.png
+      fonts/
+        icons.woff2
+        icons.woff
+      dist/
+        movement.js
+        movement.min.js
+        movement.css
+        movement.min.css
 
 `motion.js` has module imports for `run.js` and `walk.js`. `motion.scss` has module imports for `run.scss` and `walk.scss`. `main` would be
 
@@ -76,11 +84,12 @@ Let's say your package looks like this:
 ]
 ```
 
-The image files may be used or referenced within the JS or Sass files, but are not `main` files as they are not entry-points.
+Image and font files may be used or referenced within the JS or Sass files, but are not `main` files as they are not entry-points.
 
+* Use source files with module exports and imports over pre-built distribution files.
 * Do not include minified files.
 * Filenames should not be versioned (Bad: `package.1.1.0.js`; Good: `package.js`).
-* Use source files with module exports and imports over pre-built distribution files.
+* Globs like `js/*.js` are not allowed.
 
 ### moduleType
 
