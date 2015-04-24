@@ -47,11 +47,49 @@ The package's semantic version number.
 *Recommended*  
 Type: `String` or `Array` of `String`
 
-The primary acting files necessary to use your package. While Bower does not directly use these files, they are listed with the commands `bower list --json` and `bower list --paths`, so they can be used by build tools.
+The entry-point files necessary to use your package. Only one file per filetype.
 
-* Preprocessor files like CoffeeScript should be compiled.
+Entry-point files have module exports and may use module imports. While Bower does not directly use `main` files, they are listed with the commands `bower list --json` and `bower list --paths`, so they can be used by build tools.
+
+Let's say your package looks like this:
+
+    package
+      js/
+        motion.js
+        run.js
+        walk.js
+      sass/
+        motion.scss
+        run.scss
+        walk.scss
+      img/
+        motion.png
+        walk.png
+        run.png
+      fonts/
+        icons.woff2
+        icons.woff
+      dist/
+        movement.js
+        movement.min.js
+        movement.css
+        movement.min.css
+
+`motion.js` has module imports for `run.js` and `walk.js`. `motion.scss` has module imports for `run.scss` and `walk.scss`. `main` would be
+
+```
+"main": [
+  "js/motion.js",
+  "sass/motion.scss",
+]
+```
+
+Image and font files may be used or referenced within the JS or Sass files, but are not `main` files as they are not entry-points.
+
+* Use source files with module exports and imports over pre-built distribution files.
 * Do not include minified files.
-* Filenames should not be versioned (Bad: package.1.1.0.js; Good: package.js).
+* Filenames should not be versioned (Bad: `package.1.1.0.js`; Good: `package.js`).
+* Globs like `js/*.js` are not allowed.
 
 ### moduleType
 
