@@ -47,7 +47,7 @@ The package's semantic version number.
 *Recommended*  
 Type: `String` or `Array` of `String`
 
-The entry-point files necessary to use your package. Only one file per filetype.
+The entry-point files necessary to use your package. Only one file per filetype. The files that are offered should be representing your package as library. This means that the files can be used without compiling for use by the consuming party.
 
 Entry-point files have module exports and may use module imports. While Bower does not directly use `main` files, they are listed with the commands `bower list --json` and `bower list --paths`, so they can be used by build tools.
 
@@ -81,6 +81,10 @@ Let's say your package looks like this:
 "main": [
   "js/motion.js",
   "sass/motion.scss",
+  "img/motion.png",
+  "fonts/icons.woff",
+  "fonts/icons.woff2",
+  "dist/movement.css"
 ]
 ```
 
