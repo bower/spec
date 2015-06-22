@@ -81,9 +81,6 @@ Let's say your package looks like this:
 "main": [
   "js/motion.js",
   "sass/motion.scss",
-  "img/motion.png",
-  "fonts/icons.woff",
-  "fonts/icons.woff2",
   "dist/movement.css"
 ]
 ```
