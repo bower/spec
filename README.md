@@ -47,7 +47,7 @@ The package's semantic version number.
 *Recommended*  
 Type: `String` or `Array` of `String`
 
-The entry-point files necessary to use your package. Only one file per filetype. The files that are offered should be representing your package as library. This means that the files can be used without compiling for use by the consuming party.
+The entry-point files necessary to use your package. Only one file per filetype. The files that are offered should be representing your package as library. This means that the files can be used without compiling for use by the consuming party. This is not limited to **only** the 'compiled' version. In case of `.less`, `.scss` or `(d).ts` etc. they can be used as library aswell when used in the consuming party source.
 
 Entry-point files have module exports and may use module imports. While Bower does not directly use `main` files, they are listed with the commands `bower list --json` and `bower list --paths`, so they can be used by build tools.
 
