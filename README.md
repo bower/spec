@@ -88,6 +88,7 @@ Image and font files may be used or referenced within the JS or Sass files, but 
 
 * Use source files with module exports and imports over pre-built distribution files.
 * Do not include minified files.
+* Do not include assets files like images, fonts, audio, or video
 * Filenames should not be versioned (Bad: `package.1.1.0.js`; Good: `package.js`).
 * Globs like `js/*.js` are not allowed.
 
