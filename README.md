@@ -27,20 +27,7 @@ Help users identify and search for your package with a brief description. Descri
 
 ### version
 
-**Ignored by Bower as git tags are used instead.**
-
-*Intended to be used in the future when Bower gets a real registry where you can publish actual packages, but for now just leave it out.*
-
-<del>
-Type: `String`
-
-The package's semantic version number.
-
-* Must be a [semantic version](http://semver.org) parseable by [node-semver](https://github.com/isaacs/node-semver).
-* If publishing a folder, the version must be higher than the version stored in the registry, when republishing.
-* Version should only be required if you are not using git tags.
-</del>
-
+**Deprecated. Use git or svn tags instead. This field is ignored by Bower.**
 
 ### main
 
