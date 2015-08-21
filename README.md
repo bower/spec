@@ -209,4 +209,4 @@ Example:
 
 Type: `Boolean`
 
-If you set it to `true` it will refuse to publish it. This is a way to prevent accidental publication of private repositories.
+If set to `true`, Bower will refuse to publish it. This is a way to prevent accidental publication of private repositories.
