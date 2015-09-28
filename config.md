@@ -2,7 +2,7 @@
 
 The config is obtained by merging multiple configurations by this order of importance:
 
-1. CLI arguments via --config
+1. CLI arguments via `--config`
 2. Environment variables
 3. Local .bowerrc located in the current working directory
 4. All .bowerrc files upwards the directory tree
@@ -31,6 +31,7 @@ Available configuration variables, in `.bowerrc.` format:
   <a href="#https-proxy">"https-proxy"</a>: "https://proxy.local",
   <a href="#ca">"ca"</a>: "/var/certificate.pem",
   <a href="#color">"color"</a>: true,
+  <a href="#timeout">"timeout"</a>: 60000,
   <a href="#storage">"storage"</a>: {
     "packages" : "~/.bower/packages",
     "registry" : "~/.bower/registry",
