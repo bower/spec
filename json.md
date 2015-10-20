@@ -70,7 +70,7 @@ Help users identify and search for your package with a brief description. Descri
 
 ### version
 
-~~Deprecated.~~
+*Deprecated*
 
 Use git or svn tags instead. This field is ignored by Bower.
 
