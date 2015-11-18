@@ -41,6 +41,9 @@ Available configuration variables, in `.bowerrc.` format:
   <a href="#resolvers">"resolvers"</a>: [
     "mercurial-bower-resolver"
   ],
+  <a href="#shallowclonehosts">"shallowCloneHosts"</a>: [
+    "myGitHost.example.com"
+  ]
 }</code></pre>
 
 ### analytics
@@ -279,5 +282,18 @@ List of [Pluggable Resolvers](http://bower.io/docs/pluggable-resolvers/) to use 
 ```json
 "resolvers": [
   "mercurial-bower-resolver"
+]
+```
+
+### shallowCloneHosts
+
+`Array`
+
+Bower's default behavior is to not use _shallow cloning_, since some Git hosts (e.g. older versions of GitHub Enterprise) fail to provide a response when asked to do a shallow clone (with `--depth 1`). This list allows to whitelist hosts that are known to support shallow cloning.
+
+
+```json
+"shallowCloneHosts": [
+  "myGitHost.example.com"
 ]
 ```
