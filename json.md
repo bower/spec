@@ -223,7 +223,7 @@ The repository in which the source code can be found.
 
 Type: `Object`
 
-Dependencies are specified with a simple hash of package name to a semver compatible identifier or URL.
+Dependencies are specified with a simple hash of package name to a server compatible identifier or URL.
 
 * Key must be a valid [name](#name).
 * Value must be a valid [semver range](https://github.com/npm/node-semver#ranges), a Git URL, or a URL (inc. tarball and zipball).
