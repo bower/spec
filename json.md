@@ -29,7 +29,7 @@ You can interactively create a bower.json with `bower init`.
     "particles"
   ],
   <a href="#authors">"authors"</a>: [
-    "Betty Beta <bbeta@example.com>"
+    "Betty Beta &lt;bbeta@example.com&gt;"
   ],
   <a href="#license">"license"</a>: "MIT",
   <a href="#ignore">"ignore"</a>: [
