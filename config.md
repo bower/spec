@@ -48,7 +48,8 @@ Available configuration variables, in `.bowerrc.` format:
     "preinstall": "<your command here>",
     "postinstall": "<your command here>",
     "preuninstall": "<your command here>"
-  }
+  },
+  <a href="#ignoredDependencies">"ignoredDependencies"</a>: ['jquery']
 }</code></pre>
 
 ### analytics
@@ -323,3 +324,14 @@ The value of each script hook may contain a % character.  When your script is ca
 
 Your script will also include an environment variable `BOWER_PID` containing the PID of the parent Bower process that triggered the script.  This can be used to verify that a `preinstall` and `postinstall` steps are part of the same Bower process.
 
+### ignoredDependencies
+
+`Array`
+
+Bower will ignore these dependencies when resolving packages.
+
+```json
+"ignoredDependencies": [
+  "jquery", "angular"
+]
+```
