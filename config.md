@@ -100,7 +100,7 @@ If your organization wishes to maintain a private registry, you may change the v
 
 #### registry.search
 
-`Array` or `String`
+`Array` of `String` or `String`
 
 An array of URLs pointing to read-only Bower registries. A string means only one. When looking into the registry for an endpoint, Bower will query these registries by the specified order.
 
@@ -282,7 +282,7 @@ means `auto`.
 
 ### resolvers
 
-`Array`
+`Array` of `String`
 
 List of [Pluggable Resolvers](http://bower.io/docs/pluggable-resolvers/) to use for locating and fetching packages.
 
@@ -295,7 +295,7 @@ List of [Pluggable Resolvers](http://bower.io/docs/pluggable-resolvers/) to use 
 
 ### shallowCloneHosts
 
-`Array`
+`Array` of `String`
 
 Bower's default behavior is to not use _shallow cloning_, since some Git hosts (e.g. older versions of GitHub Enterprise) fail to provide a response when asked to do a shallow clone (with `--depth 1`). This list allows to whitelist hosts that are known to support shallow cloning.
 
