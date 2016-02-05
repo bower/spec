@@ -12,12 +12,12 @@ The config is obtained by merging multiple configurations by this order of impor
 Example of CLI arguments:
 
 - `--config.endpoint-parser=<parser>`
-- `--config.storage.cache=<cache>`
+- `--config.storage.packages=<packages>`
 
 Example of valid environment variables:
 
 - `bower_https_proxy` is evaluated as `https-proxy`
-- `bower_storage__cache` is evaluated as `storage.cache`
+- `bower_storage__packages` is evaluated as `storage.packages`
 
 Available configuration variables, in `.bowerrc.` format:
 
