@@ -4,10 +4,11 @@ The config is obtained by merging multiple configurations by this order of impor
 
 1. CLI arguments via `--config`
 2. Environment variables
-3. Local .bowerrc located in the current working directory
-4. All .bowerrc files upwards the directory tree
-5. `.bowerrc` file located in user’s home folder (~)
-6. `.bowerrc` file located in the global folder (/)
+3. Environment variables with [`config`](https://docs.npmjs.com/files/package.json#config) key of package.json 
+4. Local .bowerrc located in the current working directory
+5. All .bowerrc files upwards the directory tree
+6. `.bowerrc` file located in user’s home folder (~)
+7. `.bowerrc` file located in the global folder (/)
 
 Example of CLI arguments:
 
@@ -18,6 +19,8 @@ Example of valid environment variables:
 
 - `bower_https_proxy` is evaluated as `https-proxy`
 - `bower_storage__packages` is evaluated as `storage.packages`
+
+The same keys can be used under `config` key in package.json
 
 Available configuration variables, in `.bowerrc.` format:
 
