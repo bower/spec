@@ -4,7 +4,7 @@ The config is obtained by merging multiple configurations by this order of impor
 
 1. CLI arguments via `--config`
 2. Environment variables
-3. Environment variables with [`config`](https://docs.npmjs.com/files/package.json#config) key of package.json 
+3. Environment variables with [`config`](https://docs.npmjs.com/files/package.json#config) key of package.json
 4. Local .bowerrc located in the current working directory
 5. All .bowerrc files upwards the directory tree
 6. `.bowerrc` file located in user’s home folder (~)
@@ -74,7 +74,7 @@ Data is tracked using Google Analytics and instrumented via [Insight](https://gi
 
 `String`
 
-Current working directory - the directory from which bower should run. All relative paths will be calculated according to this setting. It should be used only via programmatic API or CLI arguments. Do no put it into `.bowerrc`.
+Current working directory - the directory from which bower should run. All relative paths will be calculated according to this setting. It should be used only via programmatic API or CLI arguments. Do not put it into `.bowerrc`.
 
 ```json
 "cwd": "~/my-project"
