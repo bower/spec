@@ -18,11 +18,6 @@ You can interactively create a bower.json with `bower init`.
   <a href="#devdependencies">"devDependencies"</a>: {
     "qunit": "~1.16.0"
   },
-  <a href="#moduletype">"moduleType"</a>: [
-    "amd",
-    "globals",
-    "node"
-  ],
   <a href="#keywords">"keywords"</a>: [
     "motion",
     "physics",
@@ -127,17 +122,18 @@ Image and font files may be used or referenced within the JS or Sass files, but 
 
 ### moduleType
 
-*Recommended*
+*Deprecated*
 
-Type: `String` or `Array` of `String`s
+You should distribute and annotate your package in platform-specific way. For example:
 
-The type of module defined in the `main` JavaScript file. Can be one or an array of the following strings:
+- npm requires all modules to be available in commonjs format
+- browserify allows you to configure package with "browser" in package.json
+- babel allows you to specify requred "presets" in package.json
+- jspm allows you to specify format package format in package.json
+- webpack is able to derive the type of your package automatically
+- sass can consume scss, sass or css files
 
-+ `globals`: JavaScript module that adds to global namespace, using `window.namespace` or `this.namespace` syntax
-+ `amd`: JavaScript module compatible with AMD, like [RequireJS](http://requirejs.org/), using `define()` syntax
-+ `node`: JavaScript module compatible with [node](https://nodejs.org/) and [CommonJS](https://nodejs.org/docs/latest/api/modules.html) using `module.exports` syntax
-+ `es6`: JavaScript module compatible with [ECMAScript 6 modules](http://www.2ality.com/2014/09/es6-modules-final.html), using `export` and `import` syntax
-+ `yui`: JavaScript module compatible with [YUI Modules](http://yuilibrary.com/yui/docs/yui/create.html), using `YUI.add()` syntax
+Note that applications using `bower` to consume packages usually expect that browser-ready files will be compiled and available in amd/global and css format. We suggest to keep this convention for now until appropriate backward-compatibility measures are implemented.
 
 ### license
 
