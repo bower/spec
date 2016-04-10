@@ -42,7 +42,7 @@ You can interactively create a bower.json with `bower init`.
   <a href="#private">"private"</a>: true
 }</code></pre>
 
-## name
+### name
 
 **Required**
 
