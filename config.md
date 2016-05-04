@@ -57,17 +57,6 @@ Available configuration variables, in `.bowerrc.` format:
   ]
 }</code></pre>
 
-### analytics
-
-`Boolean`
-
-Bower can collect anonymous usage statistics. This allows the community to improve Bower and publicly display insights into CLI usage and packages at [bower.io/stats](http://bower.io/stats).
-
-Data is tracked using Google Analytics and instrumented via [Insight](https://github.com/yeoman/insight). It is made available to all Bower team members. Tracking is opt-in upon initial usage. If you'd prefer to disable analytics altogether, set `"analytics": false` in your `.bowerrc` file. Details on exactly what's tracked is available [here](https://github.com/yeoman/insight#collected-data).
-
-```json
-"analytics": true
-```
 
 ### cwd
 
