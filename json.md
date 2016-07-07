@@ -182,7 +182,8 @@ Either:
 
 ```json
 "authors": [
-  "John Doe", "John Doe <john@doe.com>",
+  "John Doe",
+  "John Doe <john@doe.com>",
   "John Doe <john@doe.com> (http://johndoe.com)"
 ]
 ```
