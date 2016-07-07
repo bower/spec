@@ -52,7 +52,7 @@ Available configuration variables, in `.bowerrc.` format:
     "postinstall": "<your command here>",
     "preuninstall": "<your command here>"
   },
-  <a href="#ignoredDependencies">"ignoredDependencies"</a>: [
+  <a href="#ignoreddependencies">"ignoredDependencies"</a>: [
     "jquery"
   ]
 }</code></pre>
