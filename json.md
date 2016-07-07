@@ -129,7 +129,7 @@ Image and font files may be used or referenced within the JS or Sass files, but 
 
 *Recommended*
 
-Type: `String` or `Array` of `String`s
+Type: `String` or `Array` of `String`
 
 The type of module defined in the `main` JavaScript file. Can be one or an array of the following strings:
 
