@@ -25,7 +25,7 @@ The same keys can be used under `config` key in package.json
 Available configuration variables, in `.bowerrc.` format:
 
 <pre><code>{
-  <a href="#cwd">"cwd"</a>: "~/.my-project",
+  <a href="#cwd">"cwd"</a>: "~/my-project",
   <a href="#directory">"directory"</a>: "bower_components",
   <a href="#registry">"registry"</a>: "https://bower.herokuapp.com",
   <a href="#shorthand-resolver">"shorthand-resolver"</a>: "git://github.com/{{owner}}/{{package}}.git",
