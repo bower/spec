@@ -160,6 +160,17 @@ Note: symbolic links will always be ignored. However `bower.json` will never be 
 
 The ignore rules follow the same rules specified in the [gitignore pattern spec](http://git-scm.com/docs/gitignore).
 
+Default ignores are as follows:
+
+```
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+```
 
 ### keywords
 
