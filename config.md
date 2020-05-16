@@ -41,6 +41,7 @@ Available configuration variables, in `.bowerrc.` format:
     "links" : "~/.bower/links"
   },
   <a href="#interactive">"interactive"</a>: true,
+  <a href="#tmp">"tmp"</a>: "./tmp/bower",
   <a href="#resolvers">"resolvers"</a>: [
     "mercurial-bower-resolver"
   ],
